@@ -1,5 +1,5 @@
-##Tienda Marolio:
-Este es un proyecto de ecommerce básico que se utiliza para el curso de React JS. La aplicacion permite ver una lista de productos de supermecado y realizar compras en linea. Los productos y las órdenes de compra se almacenan en Firebase.
+##StoreFuture:
+La aplicacion permite ver una lista de productos de nuestra tienda online y realizar compras en linea. Los productos y las órdenes de compra se almacenan en Firebase.
 
 
 ## Tecnologias y herramientas utilizadas:

@@ -1,10 +1,8 @@
 import Swal from "sweetalert2";
 
-//1) Voy a importar useState y el CreateContext que me permite crear un contecto que almacenará toda la logica de mi carrillo de compras.
 
 import { useState, createContext } from "react";
 
-//2) Creamos el contexto
 
 export const CarritoContext = createContext({
   carrito: [],
@@ -13,22 +11,18 @@ export const CarritoContext = createContext({
 });
 
 export const CarritoProvider = ({ children }) => {
-  //3)cremamos el estado para el carrito, total, y cantidadTotal
   const [carrito, setCarrito] = useState([]);
   const [total, setTotal] = useState(0);
   const [cantidadTotal, setCantidadTotal] = useState(0);
 
-  //Verificamos por consola:
   console.log(carrito);
 
-  //4)Agregamos algunas funciones auxiliares para la lógica del carrito:
 
   const agregarAlCarrito = (item, cantidad) => {
     const productoExistente = carrito.find((prod) => prod.item.id === item.id);
 
     if (!productoExistente) {
       setCarrito((prev) => [...prev, { item, cantidad }]);
-      //La sintaxis: prev => [...prev, {item,cantidad}] se utiliza para crear un nuevo array a partir del estado anterior del carrito y agregar un nuevo objeto que representa el producto agregado
       setCantidadTotal((prev) => prev + cantidad);
       setTotal((prev) => prev + item.precio * cantidad);
     } else {

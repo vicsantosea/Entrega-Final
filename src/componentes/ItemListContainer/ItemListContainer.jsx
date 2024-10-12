@@ -31,25 +31,10 @@ const ItemListContainer = () => {
         })
     }, [idCategoria])
 
-    /* useEffect(() => {
-        setLoading(true)
-        const funcionProductos = idCategoria ? getProductosPorCategorias : getProductos;
-
-        funcionProductos(idCategoria)
-        .then(res => setProductos(res))
-        .catch((error) =>{
-            console.log(error)
-        })
-        .finally(()=>{
-            console.log("proceso finalizado")
-            setLoading(false)
-        })
-        
-    }, [idCategoria]) */
 
     return (
         <>
-            <h2 style={{ textAlign: "center" }}>Mis Productos</h2>
+            <h2 style={{ textAlign: "center"}}>Mis Productos</h2>
             {loading ? <Loader/> : <ItemList productos={productos}/>}
         </>
     )

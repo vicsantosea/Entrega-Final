@@ -7,10 +7,10 @@ const NavBar = () => {
   return (
     <header>
       <Link to="/">
-        <img  className='logoMarolio' src={"./img/Preview.png"} alt="Logo" />
+        <img  className='logo' src={"./img/Preview.png"} alt="Logo" />
       </Link>
 
-        <nav>
+        <nav className='textos'>
             <ul>
                 <li>
                   <NavLink to="/"> PlayStation </NavLink>
